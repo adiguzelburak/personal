@@ -120,8 +120,33 @@ const about = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/holopack/1.png",
+            alt: "Holopark Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/holopack/2.png",
+            alt: "Holopark Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/holopack/3.png",
+            alt: "Holopark Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/holopack/4.png",
+            alt: "Holopark Project",
+            width: 16,
+            height: 9,
+          },
+
+          {
+            src: "/images/projects/holopack/5.png",
+            alt: "Holopark Project",
             width: 16,
             height: 9,
           },
@@ -138,7 +163,10 @@ const about = {
             technologies.
           </>,
         ],
-        images: [],
+        images: [
+         
+
+        ],
       },
       {
         company: "Mars Robotics",
@@ -249,158 +277,6 @@ const gallery = {
   label: "Gallery",
   title: "My photo gallery",
   description: `A photo collection by ${person.name}`,
-  images: [
-    {
-      src: "/images/burak-gallery/IMG_7281.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7278.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7250.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7249.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7235.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7229.jpg",
-      alt: "image",
-      orientation: "horizontal", // 4032x3024
-    },
-    {
-      src: "/images/burak-gallery/IMG_7218.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7198.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7169.jpg",
-      alt: "image",
-      orientation: "horizontal", // 4032x3024
-    },
-    {
-      src: "/images/burak-gallery/IMG_7168.jpg",
-      alt: "image",
-      orientation: "horizontal", // 4032x3024
-    },
-    {
-      src: "/images/burak-gallery/IMG_7139.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7125.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7121.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7112.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_7065.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_6067.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_5925.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_5627.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_5352.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_5216.jpg",
-      alt: "image",
-      orientation: "horizontal", // 4032x3024
-    },
-    {
-      src: "/images/burak-gallery/IMG_5152.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_3833.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_3217.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/IMG_3114.jpg",
-      alt: "image",
-      orientation: "vertical", // 3024x4032
-    },
-    {
-      src: "/images/burak-gallery/FBBBFB15-361D-4512-8A26-7FA489878F0F.JPG",
-      alt: "image",
-      orientation: "vertical", // 2160x3840
-    },
-    {
-      src: "/images/burak-gallery/B51EED41-407B-460F-92DC-AF7469307DF9.JPG",
-      alt: "image",
-      orientation: "vertical", // 2160x3840
-    },
-    {
-      src: "/images/burak-gallery/84B0DF40-6764-44E8-9592-C0279BDA5B67.JPG",
-      alt: "image",
-      orientation: "vertical", // 2160x3840
-    },
-    {
-      src: "/images/burak-gallery/8355B16A-EFB6-46AB-9EC3-B0E90B8D337B.JPG",
-      alt: "image",
-      orientation: "vertical", // 2160x3840
-    },
-    {
-      src: "/images/burak-gallery/3AAC7695-9B47-4DA7-BFE7-B95FDAD33028.JPG",
-      alt: "image",
-      orientation: "vertical", // 2160x3840
-    },
-    {
-      src: "/images/burak-gallery/2C61DB4E-2329-4A8E-84A0-3AE594218A96.JPG",
-      alt: "image",
-      orientation: "vertical", // 2160x3840
-    },
-  ],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

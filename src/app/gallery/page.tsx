@@ -1,7 +1,23 @@
 import { Flex } from "@/once-ui/components";
-import MasonryGrid from "@/components/gallery/MasonryGrid";
+import { Suspense } from "react";
 import { baseURL } from "@/app/resources";
 import { gallery, person } from "@/app/resources/content";
+import GalleryGrid from "@/components/gallery/GalleryGrid";
+import Loading from "@/components/gallery/Loading";
+
+// Define interfaces for the API response
+interface Image {
+  url: string;
+  name: string;
+  width: number;
+  height: number;
+  orientation: string;
+}
+
+interface GalleryResponse {
+  success: boolean;
+  images: Image[];
+}
 
 export async function generateMetadata() {
   const title = gallery.title;
@@ -32,6 +48,24 @@ export async function generateMetadata() {
   };
 }
 
+// Server component to fetch gallery data
+async function GalleryImages() {
+  const response = await fetch(
+    "https://personal-be-373o.onrender.com/api/gallery",
+    {
+      next: { revalidate: 3600 }, // Revalidate every hour
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch gallery images");
+  }
+
+  const data: GalleryResponse = await response.json();
+
+  return <GalleryGrid images={data.images} />;
+}
+
 export default function Gallery() {
   return (
     <Flex fillWidth>
@@ -45,11 +79,6 @@ export default function Gallery() {
             name: gallery.title,
             description: gallery.description,
             url: `https://${baseURL}/gallery`,
-            image: gallery.images.map((image) => ({
-              "@type": "ImageObject",
-              url: `${baseURL}${image.src}`,
-              description: image.alt,
-            })),
             author: {
               "@type": "Person",
               name: person.name,
@@ -61,7 +90,9 @@ export default function Gallery() {
           }),
         }}
       />
-      <MasonryGrid />
+      <Suspense fallback={<Loading />}>
+        <GalleryImages />
+      </Suspense>
     </Flex>
   );
 }
